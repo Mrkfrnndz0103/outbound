@@ -193,28 +193,10 @@ export default function OperationsDashboard() {
   }, [])
 
   return (
-  /*
-    Responsive styles for 55" TV (4K, 3840x2160) -- scale down from previous vw units
-    We use rem units and max-width wrappers for main content.
-    The grid is limited to a max-width for ideal TV viewing, with large scalable fonts.
-  */
-
-  return (
-
-    <div className="min-h-screen w-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white overflow-hidden relative">
-      {/* UI code remains unchanged */}
-
-    <div className="min-h-screen w-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white overflow-hidden relative">
+    <>
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none select-none">
         <div
           className="w-full h-full"
-          style={{
-            backgroundImage: `
-              radial-gradient(circle at 25% 25%, #7C3AED 0%, transparent 50%),
-              radial-gradient(circle at 75% 75%, #00D9FF 0%, transparent 50%),
-              linear-gradient(45deg, transparent 40%, rgba(124, 58, 237, 0.1) 50%, transparent 60%)
-            `,
-          }}
         />
       </div>
 
@@ -452,6 +434,8 @@ export default function OperationsDashboard() {
                   </div>
                 </div>
               )
+
+
             })}
           </div>
           <div className="md:col-span-4 w-full">
@@ -593,5 +577,7 @@ export default function OperationsDashboard() {
           <div className="text-lg font-semibold lowercase tracking-wider">AUTO-REFRESH: ON DATA CHANGE</div>
         </div>
       </div>
-    </div>
+  </>
+  )
 }
+
