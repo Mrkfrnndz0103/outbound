@@ -203,9 +203,7 @@ export default function OperationsDashboard() {
   // We use rem units and max-width wrappers for main content.
   // The grid is limited to a max-width for ideal TV viewing, with large scalable fonts.
 
-  return (
     <div className="min-h-screen w-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white overflow-hidden relative">
-      {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none select-none">
         <div
           className="w-full h-full"
@@ -219,7 +217,6 @@ export default function OperationsDashboard() {
         />
       </div>
 
-      {/* Animated Grid */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none select-none"
         style={{
@@ -266,7 +263,6 @@ export default function OperationsDashboard() {
         }
       `}</style>
 
-      {/* Loading Overlay */}
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-950/95 backdrop-blur-xl z-50 text-center">
           <div className="text-center space-y-8 p-16 rounded-3xl bg-gradient-to-br from-gray-900/80 to-slate-900/80 backdrop-blur-xl border border-purple-500/20 shadow-2xl">
@@ -300,9 +296,7 @@ export default function OperationsDashboard() {
         </div>
       )}
 
-      {/* Main content: limit width for TV, use rem units for scaling */}
       <div className="relative z-10 mx-auto px-8 py-8 space-y-10 w-full" style={{maxWidth: "1920px"}}>
-        {/* Premium Header */}
         <div className="relative w-full">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-transparent to-cyan-600/10 rounded-3xl" />
           <div className="relative bg-gradient-to-r from-gray-900/60 to-slate-900/60 backdrop-blur-xl rounded-3xl border border-purple-500/20 p-8 shadow-2xl overflow-hidden w-full">
@@ -378,9 +372,7 @@ export default function OperationsDashboard() {
           </div>
         </div>
 
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-8 w-full overflow-x-hidden">
-          {/* Scorecards */}
           <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-8 w-full">
             {sortedDashboardData.slice(0, 6).map((item, index) => {
               const status = getStatusClass(item.pending)
@@ -461,7 +453,6 @@ export default function OperationsDashboard() {
               )
             })}
           </div>
-          {/* Chart */}
           <div className="md:col-span-4 w-full">
             <div className="relative h-full bg-gradient-to-br from-gray-900/60 to-slate-900/60 backdrop-blur-xl rounded-2xl border border-purple-500/20 p-8 shadow-2xl overflow-hidden min-h-[22rem] flex flex-col">
               <div
@@ -537,7 +528,6 @@ export default function OperationsDashboard() {
           </div>
         </div>
 
-        {/* Premium Data Table */}
         <div className="relative bg-gradient-to-br from-gray-900/80 to-slate-900/80 backdrop-blur-xl rounded-2xl border border-purple-500/20 shadow-2xl overflow-x-auto w-full">
           <div
             className="absolute inset-0 rounded-2xl opacity-60"
@@ -592,7 +582,6 @@ export default function OperationsDashboard() {
           </div>
         </div>
 
-        {/* Premium Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 px-4 w-full">
           <div className="flex items-center space-x-4">
             <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full animate-pulse shadow-lg" />
@@ -604,5 +593,4 @@ export default function OperationsDashboard() {
         </div>
       </div>
     </div>
-  )
 }
